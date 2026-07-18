@@ -1,0 +1,8 @@
+{
+  "include": ["sigil.ts"],
+  "compilerOptions": {
+    "lib": ["es2015"],
+    "strict": true,
+    "noEmit": true
+  }
+}

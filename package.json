@@ -1,0 +1,31 @@
+{
+  "keywords": ["sigil", "var", "variable"],
+  "author": "Herman Bergwerf",
+  "name": "sigil",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Getters and setters wrapped into a single function.",
+
+  "type": "module",
+  "main": "sigil.ts",
+  "scripts": {
+    "check": "tsc",
+    "check_example": "tsc --project tsconfig.example.json",
+    "run_example": "node --experimental-transform-types ./example/basic.ts"
+  },
+
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.13.0",
+      "onFail": "download"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^26",
+    "typescript": "^7"
+  },
+  "peerDependencies": {
+    "typescript": ">=5"
+  }
+}
