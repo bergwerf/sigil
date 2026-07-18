@@ -5,11 +5,26 @@
   "version": "0.1.0",
   "license": "MIT",
   "description": "Getters and setters wrapped into a single function.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bergwerf/sigil"
+  },
 
   "type": "module",
-  "main": "sigil.ts",
+  "main": "./dist/sigil.js",
+  "types": "./dist/sigil.d.ts",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": "./dist/sigil.js",
+      "types": "./dist/sigil.d.ts"
+    }
+  },
+
   "scripts": {
-    "check": "tsc",
+    "prepublishOnly": "tsc",
+    "build": "tsc",
+    "check": "tsc --noEmit",
     "check_example": "tsc --project tsconfig.example.json",
     "run_example": "node --experimental-transform-types ./example/basic.ts"
   },
